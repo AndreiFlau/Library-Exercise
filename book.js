@@ -11,12 +11,14 @@ let readBook = "";
 let read = "";
 
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function () {
+class Book {
+        constructor(title, author, pages, read) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.read = read;
+        }
+    info() {
         return (`Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`);
     };
 }
